@@ -1,0 +1,68 @@
+body {
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-box {
+  padding: 50px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #000;
+  background: linear-gradient(to bottom, blue, lightblue);
+}
+
+.display {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2d8d8;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.display-text {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-right: 30px;
+}
+
+.main-box span { /* for the numbers */
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;;
+  align-items: center;
+  width: 74px;
+  height: 75px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: green;
+  margin-right: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.main-box span:hover {
+  background-color: #4CAF50;
+}
+
+.main-box span:active {
+  background-color: #3e8e41;
+}
+
