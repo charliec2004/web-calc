@@ -17,6 +17,7 @@ body {
   align-items: center;
   border: 1px solid #000;
   background: linear-gradient(to bottom, blue, lightblue);
+  border-radius: 20px;
 }
 
 .display {
@@ -48,7 +49,7 @@ body {
   display: flex;
   justify-content: center;;
   align-items: center;
-  width: 74px;
+  width: 75px;
   height: 75px;
   border: 1px solid #000;
   border-radius: 8px;
@@ -56,6 +57,7 @@ body {
   margin-right: 20px;
   cursor: pointer;
   user-select: none;
+
 }
 
 .main-box span:hover {
@@ -66,3 +68,12 @@ body {
   background-color: #3e8e41;
 }
 
+#AC {
+  background-color: red;
+}
+#AC:hover {
+  background-color: #f44336;
+}
+#AC:active {
+  background-color: #d32f2f;
+}
