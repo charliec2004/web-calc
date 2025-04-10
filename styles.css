@@ -42,26 +42,37 @@ body {
   margin-right: 30px;
 }
 
-.main-box span { /* for the numbers */
+.buttons {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main-box span { /* inside the buttons */
   font-size: 40px;
   color: white;
   text-align: center;
   display: flex;
-  justify-content: center;;
+  justify-content: center;
   align-items: center;
   width: 75px;
   height: 75px;
   border: 1px solid #000;
   border-radius: 8px;
   background-color: green;
-  margin-right: 20px;
   cursor: pointer;
+  margin-left: 11px;
+  margin-right: 11px;
   user-select: none;
 
 }
 
 .main-box span:hover {
-  background-color: #4CAF50;
+  background-color: #97a898;
 }
 
 .main-box span:active {
