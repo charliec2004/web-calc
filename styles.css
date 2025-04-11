@@ -20,11 +20,12 @@ body {
   box-shadow: 17px 17px 0px #000;
   padding-bottom: 70px; /* Add extra padding to the bottom */
   padding-top:35px;
-  transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .main-box:hover {
-  transform: scale(1.03);
+  transform: translateX(-12px) translateY(-12px);
+  box-shadow: 29px 29px 0px #000;
 }
 
 .display {
