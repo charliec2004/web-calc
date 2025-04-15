@@ -1,3 +1,5 @@
+
+
 const buttons = {}; // creating a 'dictionary' of buttons to access easy later!
 for (let i = 0; i <= 9; i++) {
     buttons[i] = document.getElementById(i.toString());
@@ -11,8 +13,20 @@ buttons['.'] = document.getElementById('.');
 buttons['='] = document.getElementById('=');
 buttons['AC'] = document.getElementById('AC');
 
+// Function to safely evaluate the expression
+// Using Math.js to prevent code injection
+function safeEvaluate(expression) {
+    try {
+        // Replace 'X' with '*' if needed
+        const processedExpression = expression.toString().replace(/X/g, '*'); //expression literal with 'g' flag to replace all instances of 'X' not just first
+        // Safely evaluate using Math.js
+        return math.evaluate(processedExpression); // easy peasy
+    } catch (error) { // neva gonna happen
+        console.error("Calculation error:", error);
+        return "Error";
+    }
+}
 
-// loop through all buttons
 let currentInput = ''; // stores what the user types
 const displayText = document.getElementById('result'); // Target the child div with styles
 
@@ -24,7 +38,7 @@ for (let key in buttons) {
         if (value === '=') {
             try {
                 // Evaluate the current expression and show result
-                const result = eval(currentInput); // TODO: FIX unsafe EVAL prone to code injection
+                const result = safeEvaluate(currentInput); // TODO: FIX unsafe EVAL prone to code injection
                 displayText.textContent = result; // Update the styled child element
                 currentInput = result;
                 console.log(currentInput);
